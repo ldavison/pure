@@ -362,7 +362,7 @@ prompt_pure_async_callback() {
 			if (( code == 0 )); then
 				prompt_pure_git_dirty=
 			else
-				prompt_pure_git_dirty="*"
+				prompt_pure_git_dirty="${PURE_DIRTY_SYMBOL:-*}"
 			fi
 
 			[[ $prev_dirty != $prompt_pure_git_dirty ]] && prompt_pure_preprompt_render
